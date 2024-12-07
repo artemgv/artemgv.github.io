@@ -2,7 +2,9 @@
 layout: default
 refactor: true
 panel_includes:
+  - toc
 tail_includes:
+  - post-nav
 ---
 
 {% include lang.html %}
@@ -15,7 +17,6 @@ tail_includes:
     {% endif %}
 
     <div class="post-meta text-muted">
-
 
       {% if page.image %}
         {% capture src %}src="{{ page.image.path | default: page.image }}"{% endcapture %}
@@ -35,8 +36,6 @@ tail_includes:
       {% endif %}
 
       <div class="d-flex justify-content-between">
-
-
         <div>
           <!-- pageviews -->
           {% if site.pageviews.provider and site.analytics[site.pageviews.provider].id %}
@@ -47,7 +46,6 @@ tail_includes:
               {{ site.data.locales[lang].post.pageview_measure }}
             </span>
           {% endif %}
-
         </div>
       </div>
     </div>
@@ -90,9 +88,17 @@ tail_includes:
         d-flex justify-content-between align-items-center mt-5 pb-2
       "
     >
+      <div class="license-wrapper">
+        {% if site.data.locales[lang].copyright.license.template %}
+          {% capture _replacement %}
+        {% endcapture %}
+          {{ site.data.locales[lang].copyright.license.template | replace: ':LICENSE_NAME', _replacement }}
+        {% endif %}
+      </div>
 
+      {% include post-sharing.html lang=lang %}
+    </div>
     <!-- .post-tail-bottom -->
   </div>
-  
   <!-- div.post-tail-wrapper -->
 </article>

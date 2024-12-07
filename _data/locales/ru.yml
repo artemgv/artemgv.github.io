@@ -30,7 +30,7 @@ panel:
 copyright:
   # Shown at the bottom of the post
   license:
-    template: Авторский пост защищен лицензией :LICENSE_NAME.
+    template_: Авторский пост защищен лицензией :LICENSE_NAME.
     name: CC BY 4.0
     link: https://creativecommons.org/licenses/by/4.0/
 
