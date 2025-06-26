@@ -12,7 +12,24 @@ platforms:
 #
   - type: Telegram
     icon: "fab fa-telegram"
-    link: "https://t.me/share/url?url=URL&text=TITLE"
+    link: "https://t.me/share/url?url=URL&text="
+#   link: "https://t.me/share/url?url=URL&text=TITLE"
+
+  - type: WhatsApp
+    icon: "fab fa-whatsapp"
+    link: "https://api.whatsapp.com/send?text=URL%20"
+#   link: "https://api.whatsapp.com/send?text=TITLE%20URL"
+
+  - type: VK
+    icon: "fab fa-vk"
+    link: "https://vk.com/share.php?url=URL&title="
+#   link: "https://vk.com/share.php?url=URL&title=TITLE"
+
+  - type: OK
+    icon: "fab fa-odnoklassniki"
+    link: "https://connect.ok.ru/offer?url=URL&title="
+#   link: "https://connect.ok.ru/offer?url=URL&title=TITLE"
+
 
   # Uncomment below if you need to.
   #
